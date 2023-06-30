@@ -1,0 +1,28 @@
+<div class="card card-body p-4 rounded-0 bg-dark text-white">
+  <h4>Agregar el Producto</h4>
+  <form action="/productos/agregar" method="Post">
+  <div>
+    <label for="nombre">Nombre:</label>
+    <input type="text" name="nombre" placeholder="Nombre" id="nombre"
+    class="form-control bg-dark text-white" />
+  </div>
+  <div>
+    <label for="Descripcion">Descripcion:</label>
+    <textarea
+      type="text"
+      name="descripcion"
+      cols="25"
+      rows="5"
+      placeholder="descripcion"
+      id="descripcion"
+      class="form-control bg-dark text-white"
+    ></textarea>
+  </div>
+  <div>
+    <label for="precio">Precio:</label>
+    <input type="number" name="precio" placeholder="precio" id="precio" 
+    class="form-control bg-dark text-white"/>
+  </div>
+  <button class="btn btn-primary btn-lg mt-3">Agregar</button>
+</form>
+</div>

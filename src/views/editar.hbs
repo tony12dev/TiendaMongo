@@ -1,0 +1,46 @@
+<div class="conatiner">
+  <div class="row">
+    <div class="col-md-5 offset-md-3">
+      <div class="card card-body bg-dark p-4 text-white">
+        <h2>Modificar Producto</h2>
+        <form action="/productos/{{productos._id}}/update" method="POST">
+          <div>
+            <label for="nombre">Nombre:</label>
+            <input
+              type="text"
+              name="nombre"
+              placeholder="Name"
+              value="{{productos.nombre}}"
+              class="form-control bg-dark text-white"
+            />
+          </div>
+          <div>
+            <label for="descripcion">Descripcion:</label>
+            <textarea
+              name="descripcion"
+              id=""
+              cols="30"
+              placeholder="Description"
+              rows="5"
+              class="form-control bg-dark text-white"
+            >
+              {{productos.descripcion}}
+            </textarea>
+          </div>
+          <div>
+            <label for="Precio">Precio:</label>
+            <input
+              type="text"
+              name="precio"
+              placeholder="Price"
+              value="{{productos.precio}}"
+              class="form-control bg-dark text-white"
+            />
+          </div>
+          <button class="btn btn-primary mt-3">Actualizar</button>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

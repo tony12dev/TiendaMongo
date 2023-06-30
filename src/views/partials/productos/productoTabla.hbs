@@ -1,0 +1,56 @@
+{{#if productos}}
+
+  <table class="table table-bordered table-hover table-dark">
+    <thead style="text-align: center;">
+      <tr class="text-center">
+        <th>#</th>
+        <th>Nombre</th>
+        <th>Descripcion</th>
+        <th>Precio</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody style="text-align: center;">
+      {{#each productos}}
+        <tr>
+          <td><p>{{@index}}</p></td>
+          <td><p>{{nombre}}</p></td>
+          <td><p>{{descripcion}}</p></td>
+          <td><p>{{precio}}</p></td>
+          <td>
+            {{#if opcion}}
+              <a href="/productos/{{_id}}/status" class="btn btn-warning">No
+                disponible</a>
+            {{else}}
+              <a
+                href="/productos/{{_id}}/status"
+                class="btn btn-success"
+              >Disponible</a>
+            {{/if}}
+            <a
+              href="/productos/{{_id}}/update"
+              class="btn btn-info"
+            >Actualizar</a>
+            <a
+              href="/productos/{{_id}}/delete"
+              class="btn btn-danger"
+            >Eliminar</a>
+          </td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+{{else}}
+  <div class="h-100 d-flex aling-items-center justify-content-center">
+    <div class="text-center text-white">
+      <h1>No hay Productos</h1>
+      <img
+        src="icons/agotado.png"
+        width="350px"
+        height="auto"
+        alt="no hay Productos"
+        class="w-75"  
+      />
+    </div>
+  </div>
+{{/if}}
